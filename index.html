@@ -1,5 +1,20 @@
 <pre>
+<html>
+<body>
 
-hii hello!!
+<?php
+$file = fopen("file.txt", "r");
 
+if(!feof($file)) {
+  $url = fgets($file);
+}
+$url = rtrim($url, "\r\n");
+
+echo "<img src='$url/airplane.png'>";
+
+fclose($file);
+?>
+
+</body>
+</html>
 </pre>
